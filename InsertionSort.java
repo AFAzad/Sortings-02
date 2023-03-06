@@ -28,5 +28,25 @@ public class InsertionSort{
         insertSort(a);
 
         // Time complexity is O(N^2);
+
+        // Practice 02: Insertuin Sort using while loop
+
+        int[] arr={14,11,10,12,15,13};
+        int temp, j;
+        System.out.println();
+        System.out.println("Inserion sort using while loop");
+
+        for(int i=1; i<arr.length; i++){
+            temp = arr[i];
+            j=i;
+            while(j>0 && arr[j-1]>temp){
+                arr[j] = arr[j-1];
+                j= j-1;
+            }
+            arr[j]=temp;
+        }
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
     }
 }
